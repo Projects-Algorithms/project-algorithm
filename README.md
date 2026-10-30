@@ -27,15 +27,34 @@ A webcam-based AI waste classification and recycling assistant built with Python
 - PySide6
 
 ## Installation
-Activate the project's virtual environment and install dependencies:
+From the project root, use Python and PowerShell to create a virtual environment and install the dependencies:
 
 ```powershell
-.\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
 ```
 
+### Model weights
+
+The application requires a trained six-class YOLO classification model at
+`model\best.pt`. Model weights are excluded from Git by `.gitignore`, so
+cloning this repository alone does not provide the model. Obtain the project
+weights from the project maintainer or its published release, then place them
+at:
+
+```text
+model\best.pt
+```
+
+The model must contain these class names: `Can_Metal`, `Glass`, `Organic`,
+`Other`, `Paper`, and `Plastic`. If the weights are missing or incompatible,
+the app cannot start camera classification. To make setup easier for other
+users, publish the weights as a GitHub Release asset and add its download link
+here.
+
 ## Run
-From the project root folder, run:
+Once the dependencies and model weights are in place, run:
 
 ```powershell
 python main.py
@@ -53,17 +72,20 @@ python main.py
 - `waste_history.csv` - Detection history
 - `waste_statistics.csv` - Category statistics
 - `dataset-classification/` - Classification dataset
-- `runs/` - Training results and model weights
+- `model/best.pt` - Required trained model weights (not included in Git)
+- `evaluate_test.py` - Evaluate the model on the test dataset
+- `evaluation/` - Saved evaluation report and confusion matrix
 
 ## Dataset and Model
-The project uses a trained YOLO classification model with six categories. The dataset contains training, validation, and test folders.
-
-The dataset source, license, and image counts still need to be documented in the final report.
+The project uses a trained YOLO classification model with six categories. The
+dataset contains training, validation, and test folders. Dataset counts,
+source, and license are documented below.
 
 ## Testing
-The GUI, webcam classification, confidence display, sorting instructions, statistics, and duplicate-count prevention have been tested.
-
-Low-confidence predictions and camera/model error handling still need final verification.
+The model was evaluated on the held-out test set; results are shown below.
+Application startup and model loading have been verified. Webcam behavior,
+low-confidence predictions, and camera error handling still need real-device
+testing.
 
 ## Limitations
 - Classifies one waste item at a time.

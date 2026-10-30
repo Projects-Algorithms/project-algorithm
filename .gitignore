@@ -2,9 +2,22 @@ venv/
 __pycache__/
 *.py[cod]
 runs/
+model/
 dataset/
 dataset-six-class/
 dataset-classification/
 old_versions/
 yolo11n-cls.pt
 *.zip
+# Python cache
+__pycache__/
+*.pyc
+
+# Large dataset folders (optional: exclude if too large for Git)
+dataset/
+dataset-classification/
+# dataset-six-class/
+
+# Test images (if not intended for repository)
+organic_check.jpg
+other_check.jpg
