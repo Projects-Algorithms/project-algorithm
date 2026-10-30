@@ -1,0 +1,6 @@
+Can_Metal
+Glass
+Organic
+Other
+Paper
+Plastic

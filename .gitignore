@@ -1,10 +1,4 @@
 venv/
 __pycache__/
 *.py[cod]
-runs/
-dataset/
-dataset-six-class/
-dataset-classification/
-old_versions/
-yolo11n-cls.pt
 *.zip
