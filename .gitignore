@@ -4,7 +4,6 @@ __pycache__/
 runs/
 model/
 dataset/
-dataset-six-class/
 dataset-classification/
 old_versions/
 yolo11n-cls.pt
