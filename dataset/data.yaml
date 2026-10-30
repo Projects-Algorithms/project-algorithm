@@ -1,0 +1,12 @@
+path: C:/Users/USER/Desktop/smart-waste-sorter-new/dataset
+train: images/train
+val: images/val
+test: images/test
+nc: 6
+names:
+- Organic
+- Glass
+- Can/Metal
+- Other
+- Paper
+- Plastic
