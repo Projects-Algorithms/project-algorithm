@@ -122,6 +122,7 @@ python main.py
 | Student 1 | AI / Computer Vision | Dataset preparation, AI model training, and waste detection |
 | Student 2 | Backend Developer | Application logic, backend development, and AI integration |
 | Student 3 | UI/UX & Frontend Developer | User interface, application design, and frontend development |
+| Student 4 | Tester + Project Coordinator + find bugs, coordinate the team, prepare and give the presentation |
 
 ## 🎯 Project Objectives
 
